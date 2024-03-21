@@ -61,3 +61,13 @@ exercises.c:111:10: error: variable ‘estak’ set but not used [-Werror=unused
 cc1: all warnings being treated as errors
 Compilation failed
 62aec0f
+Thu 21 Mar 2024 11:35:04 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:115:21: error: invalid type argument of unary ‘*’ (have ‘int’)
+  115 |         push(estak, *cadena[i]); //inserta elemento E en pila P
+      |                     ^~~~~~~~~~
+Compilation failed
+c2d03db
