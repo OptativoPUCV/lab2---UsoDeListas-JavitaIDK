@@ -113,43 +113,47 @@ int parentesisBalanceados(char *cadena)
   char *dato;
   dato = (char*)malloc(sizeof(char));
   for(int i = 0; cadena[i] != '\0'; i++)
-    {
-      *dato = cadena[i];
-      if(cadena[i] == '(' || cadena[i] == '{' || cadena[i] == '[')
-        push(P,dato); //inserta elemento E en pila P
-      else
-      {
-        if(cadena[i] == ')')
+  {
+    *dato = cadena[i];
+    if(*dato == '(' || *dato == '{' || *dato == '[')
+      push(P,dato); //inserta elemento E en pila P
+    else
         {
-          if(top(P) == NULL)
-            return 0;
-          else
-            pop(P);  
-        }
-        else
-        {
-          if(cadena[i] == '}')
+          if((*dato == ')')
           {
             if(top(P) == NULL)
               return 0;
             else
-              pop(P);
+              pop(P);  
           }
           else
           {
-            if(cadena[i]== ']')
+            if((*dato == '}')
             {
               if(top(P) == NULL)
                 return 0;
               else
                 pop(P);
             }
-          }
-        }     
+            else
+            {
+              if((*dato == ']')
+              {
+                if(top(P) == NULL)
+                  return 0;
+                else
+                  pop(P);
+              }
+            }
+          }     
+        }
       }
-    }
-  if(top(P) == NULL)
-    return 1;
-  return 0;
+    if(top(P) == NULL)
+      return 1;
+    return 0;
+    
+  }
+      
+      
 }
 
