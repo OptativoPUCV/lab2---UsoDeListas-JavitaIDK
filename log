@@ -779,3 +779,9 @@ Thu 21 Mar 2024 11:51:15 PM UTC:
  tests:  6|2
 total_score: 50/70
 ddcba52
+Thu 21 Mar 2024 11:56:41 PM UTC: 
+ exercises.c | 28 ++++++----------------------
+ 1 file changed, 6 insertions(+), 22 deletions(-)
+ tests:  3|2
+total_score: 40/70
+dfc9d08

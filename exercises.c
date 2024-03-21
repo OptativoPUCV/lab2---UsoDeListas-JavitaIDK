@@ -117,39 +117,23 @@ int parentesisBalanceados(char *cadena)
     *dato = cadena[i];
     if(*dato == '(' || *dato == '{' || *dato == '[')
       push(P,dato); //inserta elemento E en pila P
-    else 
+    else
     {
-      if(*dato == ')')
-      {
-        if(top(P) == NULL)
-          return 0;
-        else
-          pop(P);  
-      }
+      char* topchar = top(P);
+      if(topchar == NULL)
+        return 0;
+      if(*dato == ')' && *topchar == '(')
+        pop(P);
+      else if(*dato == '}' && *topchar == '{')
+        pop(P);
+      else if(*dato == ']' && *topchar == '[')
+        pop(P);
       else
-      {
-        if(*dato == '}')
-        {
-          if(top(P) == NULL)
-            return 0;
-          else
-            pop(P);
-        }
-        else
-        {
-          if(*dato == ']')
-          {
-            if(top(P) == NULL)
-              return 0;
-            else
-              pop(P);
-          }
-        }
-      }     
-    }
+        return 0;
+    }    
   }
   if(top(P) == NULL)
     return 1;
-  return 0;  
+  return 0;
 }
 
