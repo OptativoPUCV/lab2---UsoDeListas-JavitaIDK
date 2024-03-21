@@ -128,7 +128,7 @@ int parentesisBalanceados(char *cadena)
       }
       else
       {
-        if((*dato == '}')
+        if(*dato == '}')
         {
           if(top(P) == NULL)
             return 0;
@@ -137,7 +137,7 @@ int parentesisBalanceados(char *cadena)
         }
         else
         {
-          if((*dato == ']')
+          if(*dato == ']')
           {
             if(top(P) == NULL)
               return 0;
