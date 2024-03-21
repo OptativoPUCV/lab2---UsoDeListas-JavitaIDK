@@ -87,7 +87,6 @@ void eliminaElementos(List*L, int elem){
         popCurrent(L);
       numero = next(L);
     }
-  
 }
 
 /*
@@ -98,6 +97,7 @@ Puedes usar una pila auxiliar.
 */
 
 void copia_pila(Stack* P1, Stack* P2) {
+  
 }
 
 /*
@@ -108,6 +108,12 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
-   return 0;
+  Stack* estak = create_stack();
+  for(int i = 0; cadena[i] != '\0'; i++)
+    {
+      if(cadena[i] == '(' || cadena[i] == '{' || cadena[i] == '[')
+        push(estak. cadena[i]); //inserta elemento E en pila P
+    }
+  return 0;
 }
 

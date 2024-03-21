@@ -37,3 +37,27 @@ Thu 21 Mar 2024 11:30:22 PM UTC:
  tests:  3|2
 total_score: 40/70
 a75de4b
+Thu 21 Mar 2024 11:34:30 PM UTC: 
+ exercises.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:115:19: error: ‘estak’ is a pointer; did you mean to use ‘->’?
+  115 |         push(estak. cadena[i]); //inserta elemento E en pila P
+      |                   ^
+      |                   ->
+exercises.c:115:9: error: too few arguments to function ‘push’
+  115 |         push(estak. cadena[i]); //inserta elemento E en pila P
+      |         ^~~~
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:6: note: declared here
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |      ^~~~
+In file included from test.c:5:
+exercises.c:111:10: error: variable ‘estak’ set but not used [-Werror=unused-but-set-variable]
+  111 |   Stack* estak = create_stack();
+      |          ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+62aec0f
