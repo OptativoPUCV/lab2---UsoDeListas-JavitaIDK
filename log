@@ -71,3 +71,14 @@ exercises.c:115:21: error: invalid type argument of unary ‘*’ (have ‘int�
       |                     ^~~~~~~~~~
 Compilation failed
 c2d03db
+Thu 21 Mar 2024 11:36:28 PM UTC: 
+ exercises.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:115:13: error: ‘dato’ may be used uninitialized [-Werror=maybe-uninitialized]
+  115 |       *dato = cadena[i];
+      |       ~~~~~~^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+6b55cab
