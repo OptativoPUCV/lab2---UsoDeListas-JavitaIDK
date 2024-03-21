@@ -8,3 +8,14 @@ Thu 21 Mar 2024 11:25:51 PM UTC:
  tests:  1|4
 total_score: 10/70
 496dfc9
+Thu 21 Mar 2024 11:27:05 PM UTC: 
+ exercises.c | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:65:12: error: assignment to ‘int’ from ‘int *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   65 |       suma += numero;
+      |            ^~
+cc1: all warnings being treated as errors
+Compilation failed
+0e11dd3
