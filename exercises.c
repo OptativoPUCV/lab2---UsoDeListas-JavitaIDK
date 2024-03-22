@@ -98,6 +98,10 @@ Puedes usar una pila auxiliar.
 
 void copia_pila(Stack* P1, Stack* P2) 
 {
+  Stack* pilaAux = create_stack();
+
+  
+  
 }
 
 /*
@@ -118,7 +122,7 @@ int parentesisBalanceados(char *cadena)
       push(P,dato); //inserta elemento E en pila P
     else
     { //si es de cierre se verifica q la pila no este vacia
-      char* topchar = top(P); 
+      char *topchar = top(P); 
       if(topchar == NULL)
         return 0;
       if(*dato == ')' && *topchar == '(') //se verifica que el cierre coinsida con el q abre
