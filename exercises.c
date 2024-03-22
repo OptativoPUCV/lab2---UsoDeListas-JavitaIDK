@@ -96,8 +96,8 @@ El orden de ambas pilas se debe mantener.
 Puedes usar una pila auxiliar.
 */
 
-void copia_pila(Stack* P1, Stack* P2) {
-  
+void copia_pila(Stack* P1, Stack* P2) 
+{
 }
 
 /*
@@ -109,30 +109,29 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 
 int parentesisBalanceados(char *cadena) 
 {
-  Stack* P = create_stack();
-  char* dato;
-  //dato = (char*)malloc(sizeof(char));
+  Stack* P = create_stack(); //se crea pila
+  char *dato;
   for(int i = 0; cadena[i] != '\0'; i++)
   {
-    dato = &cadena[i];
-    if(*dato == '(' || *dato == '{' || *dato == '[')
+    dato = &cadena[i]; //parentesis actual
+    if(*dato == '(' || *dato == '{' || *dato == '[') //si apertura, lo añadimos a la pila
       push(P,dato); //inserta elemento E en pila P
     else
-    {
-      char* topchar = top(P);
+    { //si es de cierre se verifica q la pila no este vacia
+      char* topchar = top(P); 
       if(topchar == NULL)
         return 0;
-      if(*dato == ')' && *topchar == '(')
+      if(*dato == ')' && *topchar == '(') //se verifica que el cierre coinsida con el q abre
         pop(P);
       else if(*dato == '}' && *topchar == '{')
-        pop(P);
+        pop(P); //se elimina
       else if(*dato == ']' && *topchar == '[')
         pop(P);
       else
         return 0;
     }    
   }
-  if(top(P) == NULL)
+  if(top(P) == NULL) //se verifica q este vacia, si es asi, esta balanceada
     return 1;
   return 0;
 }
