@@ -110,7 +110,7 @@ void copia_pila(Stack* P1, Stack* P2)
   
   dato = top(pilaAux);
   
-  while(dato != NULL)
+  while(dato != NULL) //copiar pila axuiliar en p2 y restrablecer p1
     {
       push(P2, dato);
       push(P1,dato);
